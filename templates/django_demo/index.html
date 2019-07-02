@@ -1,0 +1,10 @@
+{% extends "django_demo/base.html" %}
+{% block content %}
+    {% for user in users %}
+        <div>
+            <span>姓名：</span><a href="role/{{ user.id }}">{{ user.name }}</a>
+            <span>姓名：</span><a href="{% url 'demo:role2' %}?userId={{ user.id }}">{{ user.name }}</a>
+            <span>年龄：{{ user.age }}</span>
+        </div>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,8 @@
+{% extends "django_demo/base.html" %}
+{% block content %}
+    {% for role in roles %}
+        <div>
+            <span>角色名称：{{ role.name }}</span>
+        </div>
+    {% endfor %}
+{% endblock %}
